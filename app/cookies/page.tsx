@@ -1,14 +1,1 @@
-import Link from 'next/link';
-export default function CookiesPage(){
-  return (
-    <div className="policy-page">
-      <h1>Cookies</h1>
-      <p>We use cookies to keep the shopping bag working and to understand how the site is used.</p>
-      <h2>What we store</h2>
-      <p>A small identifier in your browser so your bag items persist between visits. No payment details are stored.</p>
-      <h2>How to control them</h2>
-      <p>You can disable cookies in your browser settings. The shopping bag will not work without them.</p>
-      <Link href="/privacy" className="store-button store-button-light">Privacy policy</Link>
-    </div>
-  );
-}
+export default function Cookies(){return <main id="main" className="policy-page"><a href="/">BAETEE · Back to collection</a><h1>Cookie & Storage Policy</h1><p>Last updated: 5 October 2026.</p><p>The BAETEE application uses local browser storage for your shopping bag and homepage headline preference. These records stay on your device until you clear them.</p><p>No advertising or analytics cookies have been added. The hosting platform may use necessary cookies to provide secure access.</p><p>You can clear site data in your browser settings. This removes saved bag items.</p></main>}

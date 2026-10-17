@@ -1,0 +1,6 @@
+const dates=[
+ {date:'19 November 1997',title:'A daughter reaches for the stars.',story:'Kalpana Chawla’s first spaceflight launched aboard Columbia on STS-87. Our Orbit of Possibility design honours the courage to look further.',source:'https://www.nasa.gov/mission/sts-87/',label:'The mission story · NASA'},
+ {date:'3 January 1831',title:'Education opens a new horizon.',story:'Remembering Savitribai Phule, born on this day, whose work helped open education to girls and challenge the limits placed on women.',source:'https://www.pib.gov.in/PressReleasePage.aspx?PRID=2211009',label:'Remembering Savitribai · PIB'},
+ {date:'12 July 2018',title:'Determination becomes a golden moment.',story:'Hima Das won the women’s 400m at the World U20 Championships in Tampere. A date to remember the daughters who turn discipline into possibility.',source:'https://worldathletics.org/news/report/report-womens-400m-iaaf-world-u20-champions',label:'The championship story · World Athletics'}
+];
+export default function DaughtersDates(){return <section className="daughters-dates" aria-label="Dates that honour the daughters of India">{dates.map(p=><article className="iconic-date" key={p.date}><span>{p.date}</span><div><h2>{p.title}</h2><p>{p.story}</p><a href={p.source} target="_blank" rel="noopener noreferrer" className="product-link">{p.label}</a></div></article>)}</section>}

@@ -1,10 +1,10 @@
-'use client';
+ 'use client';
 import Link from 'next/link';
-import CollectionTools from './CollectionTools';
-import {usePathname} from 'next/navigation';
-import {ShoppingBag} from 'lucide-react';
+import {useState} from 'react';
+import {ShoppingBag,Menu} from 'lucide-react';
+import {Button} from '@/components/ui/button';
+import {Sheet,SheetTrigger,SheetContent,SheetTitle,SheetDescription} from '@/components/ui/sheet';
 import {useCart} from './CartProvider';
-export default function Header(){
- const {count}=useCart();const path=usePathname();
- return <><CollectionTools/><a className="skip-link" href="#main">Skip to content</a><div className="store-announcement">Hand-painted in India. Made to order.</div><header className="store-header"><Link href="/" aria-label="BAETEE home" className="store-logo"><img src="/brand/baetee-ribbon-logo.svg" alt="BAETEE — Born in India" width="1025" height="545"/></Link><nav aria-label="Main navigation"><Link href="/#shop" aria-current={path==='/'?'page':undefined}>Tee's</Link><a href="/commissions" aria-current={path.startsWith('/commissions')?'page':undefined}>Collectibles</a></nav><Link href="/checkout" className="store-bag" aria-label={`Shopping bag, ${count} ${count===1?'item':'items'}`}><ShoppingBag size={21} strokeWidth={1.5}/><span>Bag</span><span className="bag-count">{count}</span></Link></header></>;
-}
+import CollectionTools from './CollectionTools';
+const links=[['Tees','/#shop'],['Paintings','/commissions'],['Collectibles','/collections/dolls'],['Impressionism & masters','/collections/masters'],['Daughters & iconic dates','/collections/tributes'],['Generation now','/collections/generation'],['Colours Beyond the Rain','/collections/riya'],['Tumblers','/collections/tumblers'],['White sneakers','/collections/sneakers'],['Denim jackets','/collections/denim'],['Tote bags','/collections/accessories'],['About us','/about'],['Our edition approach','/editions'],['Join as an artist','/artists'],['Artist review · owner','/artists/review']];
+export default function Header(){const {count}=useCart();const [open,setOpen]=useState(false);return <><CollectionTools/><a className="skip-link" href="#main">Skip to content</a><div className="store-announcement">Art you can wear. Stories you can keep.</div><header className="store-header"><div className="header-brand"><Sheet open={open} onOpenChange={setOpen}><SheetTrigger asChild><Button variant="ghost" className="hamburger-button" aria-label="Open collection menu"><Menu size={23}/></Button></SheetTrigger><SheetContent side="left" className="baetee-menu"><SheetTitle>Explore BAETEE</SheetTitle><SheetDescription>Art, Tees and objects with a story.</SheetDescription><nav aria-label="Collection menu">{links.map(([label,url])=><Link key={url} href={url} onClick={()=>setOpen(false)}>{label}</Link>)}</nav></SheetContent></Sheet></div><Link href="/" aria-label="BAETEE home" className="store-logo"><img src="/brand/baetee-clear-logo.png" alt="BAETEE — Born in India" width="1025" height="545"/></Link><Link href="/checkout" className="store-bag" aria-label={`Shopping bag, ${count} items`}><ShoppingBag size={21} strokeWidth={1.5}/><span>Bag</span><span className="bag-count">{count}</span></Link></header></>}

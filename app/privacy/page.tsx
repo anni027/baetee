@@ -1,16 +1,1 @@
-import Link from 'next/link';
-export default function PrivacyPage(){
-  return (
-    <div className="policy-page">
-      <h1>Privacy</h1>
-      <p>This site is a storefront demo. It does not collect personal data beyond what is needed to run the shopping bag.</p>
-      <h2>Information we collect</h2>
-      <p>Items added to the bag are stored locally in your browser. No account is required.</p>
-      <h2>How we use it</h2>
-      <p>The bag uses local storage so your selections persist during a session. Nothing is sent to a server.</p>
-      <h2>Third parties</h2>
-      <p>No analytics, advertising or tracking scripts are included in this demo.</p>
-      <Link href="/" className="store-button store-button-light">Return to shop</Link>
-    </div>
-  );
-}
+export default function Privacy(){return <main id="main" className="policy-page"><a href="/">BAETEE · Back to collection</a><h1>Privacy Policy</h1><p>Last updated: 7 October 2026.</p><h2>Current site features</h2><p>This site lets you browse BAETEE paintings, collectibles and hand-painted tees. Your private bag is stored on your device. The commission form prepares an email to z@baetee.com in your chosen mail application. BAETEE does not send the email automatically or save those form fields in its website database. Payments remain awaiting configuration.</p><h2>Information in a commission</h2><p>When you send a commission email, BAETEE receives your name, email address, optional budget, selected piece and message at z@baetee.com to review and respond to your enquiry. Your chosen mail provider handles delivery. You can ask BAETEE to remove an enquiry by contacting that address.</p><h2>Artist applications</h2><p>Artist applications save your artist name, contact email, portfolio link, medium, statement, signed-in user identifier, review status and submission date in BAETEE’s application database. The BAETEE owner reviews these details to consider your work and contact you. Applications remain pending until reviewed; submitting does not transfer copyright or publish your work. Please avoid including sensitive personal details in your statement or portfolio. You may request removal by contacting z@baetee.com.</p><h2>Your device</h2><p>The shopping bag and homepage headline, image and dedication preferences are kept in browser storage. You can remove these through your browser settings. No advertising or analytics services have been added to this copy.</p><h2>Contact</h2><p>Contact BAETEE at z@baetee.com about commissions, artist applications and privacy requests.</p></main>}

@@ -1,8 +1,1 @@
-import { NextResponse } from "next/server";
-
-export async function POST(request: Request) {
-  return NextResponse.json(
-    { message: "Commission requests are disabled until email delivery is connected." },
-    { status: 503 }
-  );
-}
+export async function POST(){return Response.json({error:"Order requests are not yet connected. No order or payment has been processed."},{status:503});}

@@ -1,0 +1,14 @@
+'use client';
+import {useState} from 'react';
+import Link from 'next/link';
+import {Button} from '@/components/ui/button';
+import {Check} from 'lucide-react';
+import {productFor,currency} from '@/lib/catalog';
+import {useCart} from './CartProvider';
+import {useCuration} from './CurationProvider';
+import BrandMnemonic from './BrandMnemonic';
+import ProductBrandStory from './ProductBrandStory';
+import ArtworkPricing from './ArtworkPricing';
+import EditionNote from './EditionNote';
+import SizeGuide from './SizeGuide';
+export default function WearableView({kind,id}){const p=productFor(kind,id),isSneaker=kind==='sneaker',{add}=useCart(),{priceFor,pricingReady}=useCuration();const [added,setAdded]=useState(false);return <main id="main" className="product-page"><nav className="product-breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><Link href={isSneaker?'/collections/sneakers':'/collections/denim'}>{isSneaker?'White sneakers':'Denim jackets'}</Link><span>/</span><span>{p.painting}</span></nav><div className="product-layout"><div className="product-visual product-visual-tee"><img src={p.image} alt={p.title} fetchPriority="high"/><BrandMnemonic/></div><section className="product-details"><p className="store-kicker">{isSneaker?'White sneakers':'Denim jacket'} · Unisex</p><h1>{p.painting}</h1><ProductBrandStory id={id}/><p className="product-price">{currency.format(priceFor(kind,p))}<small>Prices in INR · Price saved when added to bag</small></p><ArtworkPricing product={p}/>{isSneaker?<><p className="size-fit-note">Your fit, before the brushwork.</p><section className="sneaker-journey" aria-label="Sneaker fit-check journey"><ol><li><strong>A plain pair, first.</strong><p>We confirm your shoe size and send a plain pair for you to check the fit.</p></li><li><strong>Return it for painting.</strong><p>BAETEE arranges and pays for the Blue Dart return journey once your fit is confirmed.</p></li><li><strong>Your painted pair comes home.</strong><p>The chosen artwork is painted onto your pair. BAETEE covers its delivery back to you.</p></li></ol><p>BAETEE covers the fit-check shipping and return. Pickup dates, serviceability and the final fit are confirmed before production.</p></section></>:<div className="size-selector-heading"><p>One free size · Unisex</p><SizeGuide/></div>}<Button className="store-button product-add" disabled={!pricingReady} onClick={()=>{add(id,isSneaker?'Fit check':'Free size',kind);setAdded(true)}}>{added?<><Check size={18}/>Added to your bag</>:'Add to bag'}</Button>{added&&<p className="cart-feedback" role="status">Your selection is saved. <Link href="/checkout">View bag</Link></p>}<EditionNote/><div className="product-notes"><p>{p.sku}</p><p>Made to order · Artwork may vary in its painted finish.</p><p>Production and dispatch begin when ordering opens.</p></div></section></div></main>}
