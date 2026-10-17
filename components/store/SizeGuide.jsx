@@ -1,0 +1,7 @@
+'use client';
+import {Ruler} from 'lucide-react';
+import {Button} from '@/components/ui/button';
+import {Dialog,DialogTrigger,DialogContent,DialogTitle,DialogDescription} from '@/components/ui/dialog';
+export default function SizeGuide(){
+ return <Dialog><DialogTrigger asChild><Button variant="ghost" className="size-guide-trigger"><Ruler size={16}/>Size guide</Button></DialogTrigger><DialogContent className="size-guide-dialog"><DialogTitle className="size-guide-title">Find your loose fit</DialogTitle><DialogDescription>Start with a loose-fit Tee whose fit you already love.</DialogDescription><p className="size-guide-fit">BAETEE Tee's have a relaxed, loose fit. Lay your reference tee flat, smooth it gently and measure without stretching the fabric.</p><dl className="size-guide-measures"><div><dt>Chest width</dt><dd>Measure straight across the front, from one underarm seam to the other.</dd></div><div><dt>Body length</dt><dd>Measure from the highest shoulder point beside the neckline down to the bottom hem.</dd></div><div><dt>Shoulder width</dt><dd>Measure across the back from one shoulder seam to the other.</dd></div></dl><p className="size-guide-tip">These are garment measurements taken flat. Double the chest width to calculate the chest circumference.</p><p className="size-guide-pending">Exact measurements for XS-XXL are awaiting confirmation. The numeric size chart will be added here once confirmed.</p></DialogContent></Dialog>;
+}

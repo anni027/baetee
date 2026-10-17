@@ -1,0 +1,157 @@
+envVarGroups:
+  - name: baetee-medusa-common
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: COOKIE_SECRET
+        generateValue: true
+
+databases:
+  - name: baetee-medusa-db
+    region: singapore
+    plan: 0.5c-1g
+    postgresMajorVersion: "17"
+    ipAllowList: []
+    databaseName: baetee
+    user: baetee
+
+services:
+  - type: keyvalue
+    name: baetee-medusa-redis
+    region: singapore
+    plan: 256mb
+    maxmemoryPolicy: noeviction
+    persistenceMode: journal-snapshot
+    ipAllowList: []
+  - type: web
+    name: baetee-medusa-server
+    runtime: node
+    region: singapore
+    plan: 1c-2g
+    rootDir: backend
+    buildCommand: npm ci --include=dev && npm run build && cd .medusa/server && npm ci --omit=dev
+    preDeployCommand: cd .medusa/server && npm run migrate
+    startCommand: cd .medusa/server && npm run start
+    healthCheckPath: /health
+    envVars:
+      - fromGroup: baetee-medusa-common
+      - key: STORE_CORS
+        sync: false
+      - key: ADMIN_CORS
+        sync: false
+      - key: AUTH_CORS
+        sync: false
+      - key: MEDUSA_BACKEND_URL
+        sync: false
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      - key: RAZORPAY_WEBHOOK_SECRET
+        sync: false
+      - key: CHECKOUT_ENABLED
+        sync: false
+      - key: PRIVACY_CONTACT_EMAIL
+        sync: false
+      - key: STORE_RULES_VERIFIED
+        sync: false
+      - key: RAZORPAY_LIVE_VERIFIED
+        sync: false
+      - key: STORE_ASSET_BASE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: EMAIL_FUNCTION_TOKEN
+        sync: false
+      - key: ORDER_DELIVERY_VERIFIED
+        sync: false
+      - key: S3_FILE_URL
+        sync: false
+      - key: S3_ACCESS_KEY_ID
+        sync: false
+      - key: S3_SECRET_ACCESS_KEY
+        sync: false
+      - key: S3_REGION
+        sync: false
+      - key: S3_BUCKET
+        sync: false
+      - key: S3_ENDPOINT
+        sync: false
+      - key: NODE_ENV
+        value: production
+      - key: MEDUSA_WORKER_MODE
+        value: server
+      - key: DATABASE_URL
+        fromDatabase:
+          name: baetee-medusa-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: keyvalue
+          name: baetee-medusa-redis
+          property: connectionString
+  - type: worker
+    name: baetee-medusa-worker
+    runtime: node
+    region: singapore
+    plan: 1c-2g
+    rootDir: backend
+    buildCommand: npm ci --include=dev && npm run build && cd .medusa/server && npm ci --omit=dev
+    startCommand: cd .medusa/server && npm run start
+    envVars:
+      - fromGroup: baetee-medusa-common
+      - key: STORE_CORS
+        sync: false
+      - key: ADMIN_CORS
+        sync: false
+      - key: AUTH_CORS
+        sync: false
+      - key: MEDUSA_BACKEND_URL
+        sync: false
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      - key: RAZORPAY_WEBHOOK_SECRET
+        sync: false
+      - key: CHECKOUT_ENABLED
+        sync: false
+      - key: PRIVACY_CONTACT_EMAIL
+        sync: false
+      - key: STORE_RULES_VERIFIED
+        sync: false
+      - key: RAZORPAY_LIVE_VERIFIED
+        sync: false
+      - key: STORE_ASSET_BASE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: EMAIL_FUNCTION_TOKEN
+        sync: false
+      - key: ORDER_DELIVERY_VERIFIED
+        sync: false
+      - key: S3_FILE_URL
+        sync: false
+      - key: S3_ACCESS_KEY_ID
+        sync: false
+      - key: S3_SECRET_ACCESS_KEY
+        sync: false
+      - key: S3_REGION
+        sync: false
+      - key: S3_BUCKET
+        sync: false
+      - key: S3_ENDPOINT
+        sync: false
+      - key: NODE_ENV
+        value: production
+      - key: MEDUSA_WORKER_MODE
+        value: worker
+      - key: DATABASE_URL
+        fromDatabase:
+          name: baetee-medusa-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: keyvalue
+          name: baetee-medusa-redis
+          property: connectionString

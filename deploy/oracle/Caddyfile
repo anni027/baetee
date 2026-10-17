@@ -1,0 +1,20 @@
+{
+  email {$ACME_EMAIL}
+}
+
+{$API_DOMAIN} {
+  encode zstd gzip
+  header {
+    Strict-Transport-Security "max-age=31536000"
+    X-Content-Type-Options nosniff
+    Referrer-Policy strict-origin-when-cross-origin
+    -Server
+  }
+  @adminOutside {
+    path /app /app/* /admin /admin/* /auth /auth/*
+    not remote_ip {$ADMIN_ALLOWED_CIDRS}
+  }
+  respond @adminOutside "Admin access is restricted." 403
+  # Keep webhook bodies unchanged. Medusa checks raw-body signatures itself.
+  reverse_proxy server:9000
+}

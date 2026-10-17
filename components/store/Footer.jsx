@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function Footer(){return <footer className="store-footer"><div><Link href="/" className="footer-wordmark">BAETEE</Link><p>Art. Objects. Worn.</p></div><nav aria-label="Footer navigation"><Link href="/#shop">Shop Tee's</Link><a href="/#artist">About Zeki</a><a href="/commissions">Submit your commission</a><Link href="/privacy">Privacy Policy</Link><Link href="/cookies">Cookie Policy</Link></nav><small>© 2026 BAETEE · Born in India</small></footer>}

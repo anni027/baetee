@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+.vercel/
+.env*
+!.env.example
+*.tsbuildinfo
+.vercel
+.docker-cli-config/
+deploy/oracle/backend.env
+deploy/oracle/redis.conf
+deploy/oracle/certs/
+deploy/oracle/backups/
+
+.vercel

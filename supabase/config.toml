@@ -1,0 +1,5 @@
+[functions.send-commission]
+verify_jwt = false
+
+[functions.send-order]
+verify_jwt = false

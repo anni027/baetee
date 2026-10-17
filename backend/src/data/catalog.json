@@ -1,0 +1,391 @@
+{
+  "sizes": [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+  ],
+  "tees": [
+    {
+      "id": 1,
+      "title": "The Flower That Waited Tee",
+      "painting": "The Flower That Waited",
+      "image": "/tee/01-flower-that-waited.webp",
+      "manifestation": "What is meant for me is already approaching.",
+      "story": "A single bud reaches towards a circle of gold, holding the promise of a bloom still to come. It honours the daughters whose dreams quietly grow into possibilities for others.",
+      "price": 3999
+    },
+    {
+      "id": 2,
+      "title": "Roots Before Roses Tee",
+      "painting": "Roots Before Roses",
+      "image": "/tee/02-roots-before-roses.webp",
+      "manifestation": "Unseen discipline creates visible abundance.",
+      "story": "A red rose rises above a branching network of roots. It honours the often unseen strength of India's daughters, whose resolve sustains families, communities and generations of growth.",
+      "price": 4499
+    },
+    {
+      "id": 3,
+      "title": "The Quiet Garden Tee",
+      "painting": "The Quiet Garden",
+      "image": "/tee/03-quiet-garden.webp",
+      "manifestation": "Peace is the highest form of wealth.",
+      "story": "A small blue flower rests among deep green leaves, bringing quiet colour to the canvas. It celebrates the daughters whose thoughtful presence gives others space to flourish.",
+      "price": 4499
+    },
+    {
+      "id": 4,
+      "title": "Sunflower After Midnight Tee",
+      "painting": "Sunflower After Midnight",
+      "image": "/tee/04-sunflower-after-midnight.webp",
+      "manifestation": "My light remains mine, even in darkness.",
+      "story": "A golden sunflower bows against a midnight sky, its colour undimmed by the darkness. It honours the daughters who carry hope through difficult seasons and illuminate the lives around them.",
+      "price": 4999
+    },
+    {
+      "id": 5,
+      "title": "A Door Made of Petals Tee",
+      "painting": "A Door Made of Petals",
+      "image": "/tee/05-door-made-of-petals.webp",
+      "manifestation": "Beauty opens the life I am ready to enter.",
+      "story": "Two sweeping petals frame an open passage, turning a delicate bloom into a doorway. It celebrates the daughters who open new paths through creativity, courage and the freedom to imagine.",
+      "price": 5499
+    },
+    {
+      "id": 6,
+      "title": "Inherited Spring Tee",
+      "painting": "Inherited Spring",
+      "image": "/tee/06-inherited-spring.webp",
+      "manifestation": "I turn what I receive into something that blooms.",
+      "story": "A young stem rises from a small root ball, crowned by a vivid red petal. It honours the daughters who carry their inheritance forward, making room for a spring of their own.",
+      "price": 4999
+    },
+    {
+      "id": 7,
+      "title": "Garden of One Hundred Tee",
+      "painting": "Garden of One Hundred",
+      "image": "/tee/07-garden-of-one-hundred.webp",
+      "manifestation": "Rarity is a way of living deliberately.",
+      "story": "A layered blush bloom unfolds with a character entirely its own. It celebrates the individuality of India's daughters, each bringing a distinct voice, gift and way of seeing to the world.",
+      "price": 3499
+    },
+    {
+      "id": 8,
+      "title": "Water Remembers the Lotus Tee",
+      "painting": "Water Remembers the Lotus",
+      "image": "/tee/08-water-remembers-the-lotus.webp",
+      "manifestation": "I rise without carrying the weight of where I began.",
+      "story": "A pale lotus opens above still water, its reflection resting beneath it. It honours the daughters who rise beyond circumstance with grace, creating possibilities that reach far beyond their beginnings.",
+      "price": 3499
+    },
+    {
+      "id": 9,
+      "title": "The Garden Kept a Secret Tee",
+      "painting": "The Garden Kept a Secret",
+      "image": "/tee/09-garden-kept-a-secret.webp",
+      "manifestation": "Mystery protects what is still becoming.",
+      "story": "A pale leaf partly shelters a dark bloom, revealing beauty without revealing everything. It celebrates the inner worlds of India's daughters and the dreams they choose to nurture in their own time.",
+      "price": 3999
+    },
+    {
+      "id": 10,
+      "title": "Home Is the First Kingdom Tee",
+      "painting": "Home Is the First Kingdom",
+      "image": "/tee/10-home-is-the-first-kingdom.webp",
+      "manifestation": "Abundance begins in the love that surrounds me.",
+      "story": "Golden flowers curve towards one another around a smaller central bloom. It honours the daughters whose love helps shape our first sense of belonging, and whose influence reaches well beyond home.",
+      "price": 5499
+    },
+    {
+      "id": 11,
+      "title": "The Rose After the Sirens Tee",
+      "painting": "The Rose After the Sirens",
+      "image": "/tee/11-rose-after-the-sirens.webp",
+      "manifestation": "What was broken can still become beautiful.",
+      "story": "A red rose stands above fallen petals and a wash of blue, holding its colour amid the fragments. It honours the daughters whose resilience makes space for beauty and renewal after hardship.",
+      "price": 5499
+    },
+    {
+      "id": 12,
+      "title": "Seeds Kept in a Teacup Tee",
+      "painting": "Seeds Kept in a Teacup",
+      "image": "/tee/12-seeds-kept-in-a-teacup.webp",
+      "manifestation": "I carry tomorrow in the smallest things.",
+      "story": "Tender seedlings emerge from a porcelain teacup, finding a home in something small and familiar. It celebrates the daughters whose everyday acts of care nurture futures larger than the moment.",
+      "price": 4499
+    },
+    {
+      "id": 13,
+      "title": "The Orchard Learned Our Names Tee",
+      "painting": "The Orchard Learned Our Names",
+      "image": "/tee/13-orchard-learned-our-names.webp",
+      "manifestation": "What we rebuild will remember our care.",
+      "story": "A fruit-bearing branch stretches across a soft, open sky, carrying both blossom and harvest. It honours the daughters whose patient work nourishes communities and leaves a living legacy for those who follow.",
+      "price": 3499
+    },
+    {
+      "id": 14,
+      "title": "Jasmine Returned to the Window Tee",
+      "painting": "Jasmine Returned to the Window",
+      "image": "/tee/14-jasmine-returned-to-window.webp",
+      "manifestation": "Home begins wherever tenderness returns.",
+      "story": "White jasmine grows around a weathered window frame, bringing life to its edges. It celebrates the daughters whose tenderness restores belonging, wherever they build a home in the world.",
+      "price": 3999
+    },
+    {
+      "id": 15,
+      "title": "The Last Watering Can Tee",
+      "painting": "The Last Watering Can",
+      "image": "/tee/15-last-watering-can.webp",
+      "manifestation": "Even one careful act can call life forward.",
+      "story": "A golden drop falls from a watering can towards a lone flower in dry earth. It honours the daughters whose smallest acts of care can sustain life and begin lasting change.",
+      "price": 4999
+    }
+  ],
+  "paintings": [
+    {
+      "id": 1,
+      "title": "The Flower That Waited",
+      "image": "/art/01-flower-that-waited.png",
+      "manifestation": "What is meant for me is already approaching.",
+      "palette": "Ivory · Moss · Pale gold",
+      "story": "A single bud reaches towards a circle of gold, holding the promise of a bloom still to come. It honours the daughters whose dreams quietly grow into possibilities for others."
+    },
+    {
+      "id": 2,
+      "title": "Roots Before Roses",
+      "image": "/art/02-roots-before-roses.png",
+      "manifestation": "Unseen discipline creates visible abundance.",
+      "palette": "Raw umber · Oxblood",
+      "story": "A red rose rises above a branching network of roots. It honours the often unseen strength of India's daughters, whose resolve sustains families, communities and generations of growth."
+    },
+    {
+      "id": 3,
+      "title": "The Quiet Garden",
+      "image": "/art/03-quiet-garden.png",
+      "manifestation": "Peace is the highest form of wealth.",
+      "palette": "Forest · Lapis · Cream",
+      "story": "A small blue flower rests among deep green leaves, bringing quiet colour to the canvas. It celebrates the daughters whose thoughtful presence gives others space to flourish."
+    },
+    {
+      "id": 4,
+      "title": "Sunflower After Midnight",
+      "image": "/art/04-sunflower-after-midnight.png",
+      "manifestation": "My light remains mine, even in darkness.",
+      "palette": "Midnight · Antique gold",
+      "story": "A golden sunflower bows against a midnight sky, its colour undimmed by the darkness. It honours the daughters who carry hope through difficult seasons and illuminate the lives around them."
+    },
+    {
+      "id": 5,
+      "title": "A Door Made of Petals",
+      "image": "/art/05-door-made-of-petals.png",
+      "manifestation": "Beauty opens the life I am ready to enter.",
+      "palette": "Coral · Burgundy · Blush",
+      "story": "Two sweeping petals frame an open passage, turning a delicate bloom into a doorway. It celebrates the daughters who open new paths through creativity, courage and the freedom to imagine."
+    },
+    {
+      "id": 6,
+      "title": "Inherited Spring",
+      "image": "/art/06-inherited-spring.png",
+      "manifestation": "I turn what I receive into something that blooms.",
+      "palette": "Tea · Tender green · Vermilion",
+      "story": "A young stem rises from a small root ball, crowned by a vivid red petal. It honours the daughters who carry their inheritance forward, making room for a spring of their own."
+    },
+    {
+      "id": 7,
+      "title": "Garden of One Hundred",
+      "image": "/art/07-garden-of-one-hundred.png",
+      "manifestation": "Rarity is a way of living deliberately.",
+      "palette": "Smoked rose · Gold · Black",
+      "story": "A layered blush bloom unfolds with a character entirely its own. It celebrates the individuality of India's daughters, each bringing a distinct voice, gift and way of seeing to the world."
+    },
+    {
+      "id": 8,
+      "title": "Water Remembers the Lotus",
+      "image": "/art/08-water-remembers-the-lotus.png",
+      "manifestation": "I rise without carrying the weight of where I began.",
+      "palette": "Lotus · Mist · Gold",
+      "story": "A pale lotus opens above still water, its reflection resting beneath it. It honours the daughters who rise beyond circumstance with grace, creating possibilities that reach far beyond their beginnings."
+    },
+    {
+      "id": 9,
+      "title": "The Garden Kept a Secret",
+      "image": "/art/09-garden-kept-a-secret.png",
+      "manifestation": "Mystery protects what is still becoming.",
+      "palette": "Bone · Charcoal · Sage",
+      "story": "A pale leaf partly shelters a dark bloom, revealing beauty without revealing everything. It celebrates the inner worlds of India's daughters and the dreams they choose to nurture in their own time."
+    },
+    {
+      "id": 10,
+      "title": "Home Is the First Kingdom",
+      "image": "/art/10-home-is-the-first-kingdom.png",
+      "manifestation": "Abundance begins in the love that surrounds me.",
+      "palette": "Emerald · Saffron · Terracotta",
+      "story": "Golden flowers curve towards one another around a smaller central bloom. It honours the daughters whose love helps shape our first sense of belonging, and whose influence reaches well beyond home."
+    },
+    {
+      "id": 11,
+      "title": "The Rose After the Sirens",
+      "image": "/art/11-rose-after-the-sirens.png",
+      "manifestation": "What was broken can still become beautiful.",
+      "palette": "Carmine · Storm grey · Antique gold",
+      "story": "A red rose stands above fallen petals and a wash of blue, holding its colour amid the fragments. It honours the daughters whose resilience makes space for beauty and renewal after hardship."
+    },
+    {
+      "id": 12,
+      "title": "Seeds Kept in a Teacup",
+      "image": "/art/12-seeds-kept-in-a-teacup.png",
+      "manifestation": "I carry tomorrow in the smallest things.",
+      "palette": "Porcelain · Cobalt · Tender green",
+      "story": "Tender seedlings emerge from a porcelain teacup, finding a home in something small and familiar. It celebrates the daughters whose everyday acts of care nurture futures larger than the moment."
+    },
+    {
+      "id": 13,
+      "title": "The Orchard Learned Our Names",
+      "image": "/art/13-orchard-learned-our-names.png",
+      "manifestation": "What we rebuild will remember our care.",
+      "palette": "Charcoal · Pear green · Mist blue",
+      "story": "A fruit-bearing branch stretches across a soft, open sky, carrying both blossom and harvest. It honours the daughters whose patient work nourishes communities and leaves a living legacy for those who follow."
+    },
+    {
+      "id": 14,
+      "title": "Jasmine Returned to the Window",
+      "image": "/art/14-jasmine-returned-to-window.png",
+      "manifestation": "Home begins wherever tenderness returns.",
+      "palette": "Jasmine · Sage · Weathered umber",
+      "story": "White jasmine grows around a weathered window frame, bringing life to its edges. It celebrates the daughters whose tenderness restores belonging, wherever they build a home in the world."
+    },
+    {
+      "id": 15,
+      "title": "The Last Watering Can",
+      "image": "/art/15-last-watering-can.png",
+      "manifestation": "Even one careful act can call life forward.",
+      "palette": "Pewter · Dry sienna · Luminous gold",
+      "story": "A golden drop falls from a watering can towards a lone flower in dry earth. It honours the daughters whose smallest acts of care can sustain life and begin lasting change."
+    }
+  ],
+  "collectibles": [
+    {
+      "id": 1,
+      "name": "The Waiting One",
+      "painting": "The Flower That Waited",
+      "image": "/collectible/baegirl-01-flower-that-waited.png",
+      "character": "Ivory, moss and pale gold. A quiet study in patience.",
+      "story": "A single bud reaches towards a circle of gold, holding the promise of a bloom still to come. It honours the daughters whose dreams quietly grow into possibilities for others."
+    },
+    {
+      "id": 2,
+      "name": "The Rooted One",
+      "painting": "Roots Before Roses",
+      "image": "/collectible/baegirl-02-roots-before-roses.png",
+      "character": "Oxblood, raw umber and antique gold. Discipline before bloom.",
+      "story": "A red rose rises above a branching network of roots. It honours the often unseen strength of India's daughters, whose resolve sustains families, communities and generations of growth."
+    },
+    {
+      "id": 3,
+      "name": "The Quiet One",
+      "painting": "The Quiet Garden",
+      "image": "/collectible/baegirl-03-quiet-garden.png",
+      "character": "Forest, lapis and cream. A private garden made collectible.",
+      "story": "A small blue flower rests among deep green leaves, bringing quiet colour to the canvas. It celebrates the daughters whose thoughtful presence gives others space to flourish."
+    },
+    {
+      "id": 4,
+      "name": "The Midnight Sun",
+      "painting": "Sunflower After Midnight",
+      "image": "/collectible/baegirl-04-sunflower-after-midnight.png",
+      "character": "Midnight black and antique gold. Light that belongs to itself.",
+      "story": "A golden sunflower bows against a midnight sky, its colour undimmed by the darkness. It honours the daughters who carry hope through difficult seasons and illuminate the lives around them."
+    },
+    {
+      "id": 5,
+      "name": "The Petal Door",
+      "painting": "A Door Made of Petals",
+      "image": "/collectible/baegirl-05-door-made-of-petals.png",
+      "character": "Coral, burgundy and blush. An invitation into another world.",
+      "story": "Two sweeping petals frame an open passage, turning a delicate bloom into a doorway. It celebrates the daughters who open new paths through creativity, courage and the freedom to imagine."
+    },
+    {
+      "id": 6,
+      "name": "The Inherited Bloom",
+      "painting": "Inherited Spring",
+      "image": "/collectible/baegirl-06-inherited-spring.png",
+      "character": "Tea, tender green and vermilion. What is inherited, blooms.",
+      "story": "A young stem rises from a small root ball, crowned by a vivid red petal. It honours the daughters who carry their inheritance forward, making room for a spring of their own."
+    },
+    {
+      "id": 7,
+      "name": "The Hundredth Garden",
+      "painting": "Garden of One Hundred",
+      "image": "/collectible/baegirl-07-garden-of-one-hundred.png",
+      "character": "Smoked rose, gold and black. Abundance with ceremony.",
+      "story": "A layered blush bloom unfolds with a character entirely its own. It celebrates the individuality of India's daughters, each bringing a distinct voice, gift and way of seeing to the world."
+    },
+    {
+      "id": 8,
+      "name": "The Lotus Memory",
+      "painting": "Water Remembers the Lotus",
+      "image": "/collectible/baegirl-08-water-remembers-lotus.png",
+      "character": "Lotus, mist and pale gold. Weightless, calm and luminous.",
+      "story": "A pale lotus opens above still water, its reflection resting beneath it. It honours the daughters who rise beyond circumstance with grace, creating possibilities that reach far beyond their beginnings."
+    },
+    {
+      "id": 9,
+      "name": "The Secret Keeper",
+      "painting": "The Garden Kept a Secret",
+      "image": "/collectible/baegirl-09-garden-kept-secret.png",
+      "character": "Bone, charcoal and sage. Mystery, held beautifully.",
+      "story": "A pale leaf partly shelters a dark bloom, revealing beauty without revealing everything. It celebrates the inner worlds of India's daughters and the dreams they choose to nurture in their own time."
+    },
+    {
+      "id": 10,
+      "name": "The First Kingdom",
+      "painting": "Home Is the First Kingdom",
+      "image": "/collectible/baegirl-10-home-first-kingdom.png",
+      "character": "Emerald, saffron and terracotta. Home, made sovereign.",
+      "story": "Golden flowers curve towards one another around a smaller central bloom. It honours the daughters whose love helps shape our first sense of belonging, and whose influence reaches well beyond home."
+    },
+    {
+      "id": 11,
+      "name": "The Mended Rose",
+      "painting": "The Rose After the Sirens",
+      "image": "/collectible/baetee-11-mended-rose.png",
+      "character": "Carmine, storm grey and antique gold. Beauty that carries its repairs with grace.",
+      "story": "A red rose stands above fallen petals and a wash of blue, holding its colour amid the fragments. It honours the daughters whose resilience makes space for beauty and renewal after hardship."
+    },
+    {
+      "id": 12,
+      "name": "The Seed Keeper",
+      "painting": "Seeds Kept in a Teacup",
+      "image": "/collectible/baetee-12-seed-keeper.png",
+      "character": "Porcelain, cobalt and tender green. Tomorrow held carefully in small hands.",
+      "story": "Tender seedlings emerge from a porcelain teacup, finding a home in something small and familiar. It celebrates the daughters whose everyday acts of care nurture futures larger than the moment."
+    },
+    {
+      "id": 13,
+      "name": "The Orchard Heir",
+      "painting": "The Orchard Learned Our Names",
+      "image": "/collectible/baetee-13-orchard-heir.png",
+      "character": "Charcoal, pear green and mist blue. A quiet inheritance of repair and return.",
+      "story": "A fruit-bearing branch stretches across a soft, open sky, carrying both blossom and harvest. It honours the daughters whose patient work nourishes communities and leaves a living legacy for those who follow."
+    },
+    {
+      "id": 14,
+      "name": "The Returning Jasmine",
+      "painting": "Jasmine Returned to the Window",
+      "image": "/collectible/baetee-14-returning-jasmine.png",
+      "character": "Jasmine, sage and weathered umber. Tenderness finding its way home.",
+      "story": "White jasmine grows around a weathered window frame, bringing life to its edges. It celebrates the daughters whose tenderness restores belonging, wherever they build a home in the world."
+    },
+    {
+      "id": 15,
+      "name": "The Golden Drop",
+      "painting": "The Last Watering Can",
+      "image": "/collectible/baetee-15-golden-drop.png",
+      "character": "Pewter, chalk white and luminous gold. One act of care, made everlasting.",
+      "story": "A golden drop falls from a watering can towards a lone flower in dry earth. It honours the daughters whose smallest acts of care can sustain life and begin lasting change."
+    }
+  ]
+}

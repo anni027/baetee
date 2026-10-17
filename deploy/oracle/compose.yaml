@@ -1,0 +1,85 @@
+name: baetee
+
+x-app: &app
+  image: baetee-medusa:${RELEASE_TAG:?Set an immutable release tag in .env}
+  build:
+    context: ../../backend
+    args:
+      MEDUSA_BACKEND_URL: https://${API_DOMAIN:?Set API_DOMAIN in .env}
+  env_file: ./backend.env
+  init: true
+  restart: unless-stopped
+  stop_grace_period: 45s
+  security_opt: [no-new-privileges:true]
+  cap_drop: [ALL]
+  volumes:
+    - ./certs/supabase-ca.crt:/run/certs/supabase-ca.crt:ro
+  depends_on:
+    redis:
+      condition: service_healthy
+  logging:
+    driver: local
+    options:
+      max-size: 10m
+      max-file: "3"
+
+services:
+  redis:
+    image: redis:7.4-alpine
+    restart: unless-stopped
+    # Password is read from a private mounted file; it is not placed in process arguments.
+    command: [redis-server, /usr/local/etc/redis/redis.conf]
+    volumes:
+      - redis-data:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf:ro
+    healthcheck:
+      test: [CMD-SHELL, "REDISCLI_AUTH=\"$$(sed -n 's/^requirepass //p' /usr/local/etc/redis/redis.conf)\" redis-cli --no-auth-warning ping | grep -q PONG"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    logging:
+      driver: local
+      options: {max-size: 10m, max-file: "3"}
+
+  server:
+    <<: *app
+    environment:
+      MEDUSA_WORKER_MODE: server
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:9000/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 20s
+      timeout: 5s
+      start_period: 90s
+      retries: 6
+
+  worker:
+    <<: *app
+    environment:
+      MEDUSA_WORKER_MODE: worker
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      API_DOMAIN: ${API_DOMAIN:?Set API_DOMAIN in .env}
+      ACME_EMAIL: ${ACME_EMAIL:?Set ACME_EMAIL in .env}
+      ADMIN_ALLOWED_CIDRS: ${ADMIN_ALLOWED_CIDRS:?Set trusted Admin IP ranges in .env}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      server:
+        condition: service_healthy
+    logging:
+      driver: local
+      options: {max-size: 10m, max-file: "3"}
+
+volumes:
+  redis-data:
+  caddy-data:
+  caddy-config:

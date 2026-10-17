@@ -1,0 +1,10 @@
+node_modules
+.medusa
+.local-state
+.npm-cache
+.env
+.env.*
+!.env.example
+tests
+*.log
+.git

@@ -1,0 +1,8 @@
+bind 0.0.0.0
+protected-mode yes
+requirepass SAME_64_HEX_REDIS_PASSWORD
+appendonly yes
+appendfsync everysec
+maxmemory 512mb
+maxmemory-policy noeviction
+dir /data

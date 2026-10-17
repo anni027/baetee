@@ -1,0 +1,8 @@
+backend/
+deploy/
+supabase/
+docs/
+tests/
+.env*
+!.env.example
+.local-state/
