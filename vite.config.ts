@@ -1,3 +1,1 @@
-import { defineConfig } from "vite";
-
-export default defineConfig({});
+// Empty config - Next.js handles bundling, not Vite
