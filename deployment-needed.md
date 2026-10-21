@@ -1,16 +1,27 @@
 # What I need to finish deployment
 
+**Current verified state (21 October 2026):**
+
+- Storefront: `https://baetee.com` and `https://www.baetee.com` are attached to Vercel project `baetee-clone`.
+- Source: `https://github.com/anni027/baetee.git`, branch `master`, commit `c6c9c7f12551c5c6164f87da73d5d63b0b00dee6` is present remotely.
+- DNS: `baetee.com` uses `aster.dns-parking.com` and `helios.dns-parking.com` (Hostinger DNS).
+- Planned backend hostname: `api.baetee.com`.
+- Supabase project reference: `fmugesosbfajrmhlbavb`; its production database/storage credentials still need to be configured privately.
+- Production catalog choice: start from the approved fresh seed.
+- A dedicated Oracle SSH key exists locally at `C:\Users\User\.ssh\baetee_oracle_ed25519`; paste only the `.pub` file into Oracle. Never upload or share the private key.
+- Vercel production currently has no application environment variables, so live Medusa catalog/cart/checkout cannot work until the backend is deployed and those values are added.
+
 Fill in the non-secret answers here or send them in chat. **Do not paste passwords, private keys or API secrets into this file or chat.** Put secrets directly in the private destination listed below and tell me when they are set. None of the following accounts/resources has been provisioned by this implementation.
 
 ## 1. Hosting, domains and access
 
 | Needed | Your answer | Why |
 |---|---|---|
-| Final store URL | Pending | Vercel domain, exact Origin checks, catalog image base |
-| API/Admin hostname | Pending, e.g. `api.yourdomain.com` | Oracle HTTPS, Admin bundle and gateway webhook |
-| DNS provider/project access | Pending | Store/API records and email sender verification |
-| Private Git repository URL and branch | Pending | Vercel import and repeatable Oracle releases; this workspace has no Git repository yet |
-| Vercel team/project access and eligible commercial plan | Pending | Deploy storefront and set private server environment |
+| Final store URL | `https://baetee.com` | Vercel domain, exact Origin checks, catalog image base |
+| API/Admin hostname | `api.baetee.com` | Oracle HTTPS, Admin bundle and gateway webhook |
+| DNS provider/project access | Hostinger DNS; user must add the API A record after the VM has an IP | Store/API records and email sender verification |
+| Private Git repository URL and branch | `https://github.com/anni027/baetee.git`, `master` | Vercel import and repeatable Oracle releases |
+| Vercel team/project access and eligible commercial plan | CLI access confirmed for project `baetee-clone`; commercial plan still needs confirmation | Deploy storefront and set private server environment |
 | Oracle tenancy/home region and VM availability | Pending | Select the allowed free resources and a nearby Supabase region |
 | Oracle VM public IP, Ubuntu version and architecture | Pending | SSH, DNS and native ARM64/AMD64 image build |
 | Oracle VM shape, OCPUs/RAM/disk and confirmed Console estimate | Pending | Stay inside the actual free allowance; current documented A1 allowance is 2 OCPUs/12 GB total |
@@ -75,8 +86,8 @@ A separate shared `EMAIL_FUNCTION_TOKEN` will be generated and set identically o
 | Commission retention period in days | Pending; positive integer for `PRIVACY_RETENTION_DAYS` on Vercel |
 | Order-record/mailbox retention and actual deletion procedure | Pending |
 | Refund/return/cancellation process | Pending |
-| Admin owner email and any additional staff roles | Pending; use a fresh password and MFA |
-| Production data choice | Pending: original approved seed, or preserve current local Admin changes through reviewed import |
+| Admin owner email and any additional staff roles | Owner email supplied previously; create through a one-time invite and use a fresh password plus MFA |
+| Production data choice | Approved original fresh seed |
 
 No new prices, shipping/tax amounts, delivery promises or inventory claims will be invented. The original approved tee prices stay intact unless you approve a change.
 
@@ -103,10 +114,13 @@ Production Medusa region ID and publishable storefront key are created by the ne
 
 Keep `CHECKOUT_ENABLED`, `STORE_RULES_VERIFIED`, `ORDER_DELIVERY_VERIFIED`, `RAZORPAY_LIVE_VERIFIED` and `COMMISSION_DELIVERY_VERIFIED` false until their checks in [deploy.md](deploy.md) pass. Catalog browsing and the database cart can be deployed before payments/email are activated.
 
-## Start with these five non-secret answers
+## Immediate next handoff
 
-1. Store domain and API hostname.
-2. Oracle home region, VM public IP, architecture/RAM and access method.
-3. Supabase project reference and region.
-4. Git repository and Vercel project/team.
-5. Whether production should preserve current local Admin changes.
+Create the Oracle instance and provide only these non-secret details:
+
+1. Oracle home region and availability domain.
+2. VM public IPv4 address.
+3. Confirmation that the image is Ubuntu 24.04 ARM64, shape `VM.Standard.A1.Flex`, with 2 OCPUs, 12 GB RAM and at least a 50 GB boot volume.
+4. Confirmation that the public key from `C:\Users\User\.ssh\baetee_oracle_ed25519.pub` was added and SSH uses the `ubuntu` account.
+
+Do not send the private SSH key, database password, Supabase service-role key, Razorpay secret or webhook secret in chat. Those are entered directly into the private VM/Supabase/Vercel destinations during deployment.

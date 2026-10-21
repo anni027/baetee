@@ -3,7 +3,7 @@ FROM node:24-bookworm-slim AS build
 WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates python3 make g++ && rm -rf /var/lib/apt/lists/*
 COPY package.json package-lock.json ./
-RUN npm ci --include=dev
+RUN npm ci --include=dev --legacy-peer-deps
 COPY . .
 ARG MEDUSA_BACKEND_URL
 # Build-time validation uses non-secret placeholders and never connects to these endpoints.
@@ -22,7 +22,7 @@ ENV NODE_ENV=production PORT=9000 XDG_CONFIG_HOME=/tmp/medusa-config
 WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates && rm -rf /var/lib/apt/lists/*
 COPY --from=build --chown=node:node /app/.medusa/server/ ./
-RUN npm ci --omit=dev && npm cache clean --force && chown node:node /app
+RUN npm ci --omit=dev --legacy-peer-deps && npm cache clean --force && chown node:node /app
 USER node
 EXPOSE 9000
 CMD ["npm", "start"]
